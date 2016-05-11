@@ -40,7 +40,8 @@ Les attributs disponibles
         - Définie le bouton qui lance les tests sur les champs
     - data-ic-submit
         - Permet de localiser le bouton d'envoie du formulaire
-        - 
+
+
 Exemple
 ```html
 <input data-ic data-ic-rules="notempty|numeric|length-4" data-ic-message="Champ non valide" data-ic-test="/test.json" type="text" name="input">
