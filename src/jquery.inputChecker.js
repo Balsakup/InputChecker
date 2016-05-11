@@ -152,17 +152,15 @@
             });
 
             self.on('submit', function (event) {
-                var error = false;
-
                 $(this).find('[data-ic]').each(function () {
-                    error = error || !inputChecker.check($(this));
+                    inputChecker.check($(this));
                 });
 
                 $(this).find('[data-ic-test]').each(function () {
-                    error = error || !inputChecker.test($(this));
+                    inputChecker.test($(this));
                 });
 
-                if (error) {
+                if (self.children('.' + parameters.errorClass).length > 0) {
                     event.preventDefault();
 
                     if (parameters.onError != null) {
