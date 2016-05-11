@@ -117,7 +117,7 @@
                 var result = false;
 
                 $.ajax({
-                    url    : input.data('ic-test').replace('{value}', input.val()),
+                    url    : input.data('ic-test').replace('$value', input.val()),
                     type   : 'GET',
                     async  : false,
                     success: function (response) {
