@@ -160,7 +160,7 @@
                     inputChecker.test($(this));
                 });
 
-                if (self.children('.' + parameters.errorClass).length > 0) {
+                if (self.find('.' + parameters.errorClass).length > 0) {
                     event.preventDefault();
 
                     if (parameters.onError != null) {
