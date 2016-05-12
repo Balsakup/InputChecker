@@ -25,7 +25,7 @@
                 var rules  = input.data('ic-rules').split('|');
                 var value  = input.val();
 
-                if (rules.indexOf('notempty') > -1 && value == '') {
+                if (rules.indexOf('notempty') > -1 && (value == '' || value == null)) {
                      return this.addError(input);
                 }
 
